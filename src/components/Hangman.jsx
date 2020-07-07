@@ -26,22 +26,40 @@ class Hangman extends Component {
     }
   }
 
+  handleGuess = e => {
+    let letter = e.target.value;
+    this.setState(st => ({
+      guessed: st.guessed.add(letter),
+      mistake: st.mistake + (st.answer.includes(letter) ? 0 : 1)
+    }));
+  }
+
   // NEED TO REFACTOR SO BLANK SPACES DO NOT GET UNDERSCORES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   guessedWord() {
     return this.state.answer.split("").map(letter => (this.state.guessed.has(letter) ? letter : " _ "));
   }
 
+  // REFACTOR WIH REGEX IN RETURN TO COVER ALL BASES CLEANER
+  // Style Buttons
   generateButtons() {
-    return "abcdefghijklomnopqrstuvwxyz".split("").map(letter => (
-      <Button
+    return "abcdefghijklomnopqrstuvwxyz0123456789".split("").map(letter => (
+      <button
         key={letter} 
         value={letter}
         onClick={this.handleGuess}
         diasabled={this.state.guessed.has(letter)}
       >
         {letter}
-      </Button>
+      </button>
     ))
+  }
+
+  resetButton = () => {
+    this.setState({
+      mistake: 0,
+      guessed: new Set([]),
+      answer: randomWord()
+    });
   }
 
   render() {
@@ -63,6 +81,8 @@ class Hangman extends Component {
           </p>
           <div>
             <p>{gameStat}</p>
+            {/* THIS WILL NEED TO BE CHANGED TO CLICKABLE IMAGE */}
+            <button class='btn btn-info' onClick={this.resetButton}>Reset</button>
           </div>
         </div>
       </div>
