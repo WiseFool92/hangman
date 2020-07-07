@@ -21,7 +21,7 @@ class Hangman extends Component {
     this.state = {
       mistake: 0,
       guessed: new Set([]),
-      answer: randomWord() //might need a semi colon here
+      answer: randomWord()
     }
   }
 
@@ -30,6 +30,7 @@ class Hangman extends Component {
     return (
       <div>
         <h1>Hangman</h1>
+        <p>{this.state.answer}</p>
       </div>
     )
   }

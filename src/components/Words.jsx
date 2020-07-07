@@ -24,6 +24,19 @@ let movieTitles = [
   "kick ass",
   "jurassic park",
   "jurassic park 2",
-  "jurassi",
-  "borat"
+  "jurassic park 3",
+  "jurassic world",
+  "borat",
+  "cabin in the woods",
+  "saving ryans privates",
+  "toy story",
+  "psycho",
+  "silence of the lambs",
+  "ferris buellers day off" 
 ]
+
+function randomWord() {
+  return movieTitles[Math.floor(Math.random() * movieTitles.length)]
+}
+
+export { randomWord } 
