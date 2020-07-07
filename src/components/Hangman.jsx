@@ -44,6 +44,7 @@ class Hangman extends Component {
   generateButtons() {
     return "abcdefghijklomnopqrstuvwxyz0123456789".split("").map(letter => (
       <button
+        class="btn btn-info"
         key={letter} 
         value={letter}
         onClick={this.handleGuess}
@@ -64,7 +65,16 @@ class Hangman extends Component {
 
   render() {
     const gameOver = this.state.mistake >= this.props.maxWrong;
+    const isWinner = this.guessedWord().join("") === this.state.answer;
     let gameStat = this.generateButtons();
+
+    if (isWinner) {
+      gameStat = "Winner"
+    }
+
+    if (gameOver) {
+      gameStat = "Lost"
+    }
     
     return (
       <div className="Hangman container">
@@ -82,7 +92,7 @@ class Hangman extends Component {
           <div>
             <p>{gameStat}</p>
             {/* THIS WILL NEED TO BE CHANGED TO CLICKABLE IMAGE */}
-            <button class='btn btn-info' onClick={this.resetButton}>Reset</button>
+            <button class='btn btn-danger' onClick={this.resetButton}>Reset</button>
           </div>
         </div>
       </div>
