@@ -1,11 +1,9 @@
-/* .Hangman {
-  width: 80%;
-  margin-top: 50px;
-} */
-
-/* .GuessBoxLocation {
-  float: right;
-} */
+body {
+  margin: 0;
+  background-image: url('./img/western.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .ImgLocation {
   margin: .5rem;
@@ -20,4 +18,12 @@
 #buttonContainer {
   transition: all .5s linear;
   margin: .2rem;
+}
+
+h1, p, h4 {
+  color: white;
+}
+
+.wrong {
+  color: #ff9b28;
 }

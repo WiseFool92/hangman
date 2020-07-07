@@ -80,7 +80,7 @@ class Hangman extends Component {
     return (
       <div className="Hangman container">
         <h1>Hangman</h1>
-        <div class="GuessBoxLocation">Wrong Guesses: {this.state.mistake} of {this.props.maxWrong}</div>
+        <div class="GuessBoxLocation" class="wrong">Wrong Guesses: {this.state.mistake} of {this.props.maxWrong}</div>
         <div class="ImgLocation">
           <img src={this.props.img[this.state.mistake]} alt=""/>
         </div>
