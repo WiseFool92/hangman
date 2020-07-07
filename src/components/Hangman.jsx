@@ -45,6 +45,7 @@ class Hangman extends Component {
     return "abcdefghijklomnopqrstuvwxyz0123456789".split("").map(letter => (
       <button
         class="btn btn-info"
+        id="buttonContainer"
         key={letter} 
         value={letter}
         onClick={this.handleGuess}

@@ -11,3 +11,13 @@
   margin: .5rem;
   padding: .5rem;
 }
+
+#buttonContainer:hover {
+  color: #0d3017;
+  margin: .1rem;
+}
+
+#buttonContainer {
+  transition: all .5s linear;
+  margin: .2rem;
+}
