@@ -1,8 +1,13 @@
-.Hamngman {
+/* .Hangman {
   width: 80%;
   margin-top: 50px;
-}
+} */
 
-.GuessBoxLocation {
+/* .GuessBoxLocation {
   float: right;
+} */
+
+.ImgLocation {
+  margin: .5rem;
+  padding: .5rem;
 }
