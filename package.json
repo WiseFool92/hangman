@@ -1,5 +1,5 @@
 {
-  "name": "hangman",
+  "name": "my-awesome-package",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "The best package",
+  "main": "index.js",
+  "repository": "https://github.com/WiseFool92/hangman",
+  "author": "Yarn Contributor",
+  "license": "MIT"
 }
