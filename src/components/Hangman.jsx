@@ -70,11 +70,11 @@ class Hangman extends Component {
     let gameStat = this.generateButtons();
 
     if (isWinner) {
-      gameStat = "Winner"
+      gameStat = " You Won"
     }
 
     if (gameOver) {
-      gameStat = "Lost"
+      gameStat = "You Lost"
     }
     
     return (
@@ -84,7 +84,6 @@ class Hangman extends Component {
         <div class="ImgLocation">
           <img src={this.props.img[this.state.mistake]} alt=""/>
         </div>
-        <hr />
         <div className="text-center">
           <h4><strong>Guess the Movie Title: </strong></h4>
           <p>
